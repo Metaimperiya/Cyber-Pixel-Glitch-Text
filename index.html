@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Glitch Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        span {
+            background-image: linear-gradient(#f0a, #f05);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: clamp(40px, 10vw, 124px);
+            font-family: "Pixelify Sans", sans-serif;
+            position: relative;
+            user-select: none;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+            z-index: 1;
+        }
+
+        span::after {
+            content: 'METAIMPERIYA';
+            position: absolute;
+            clip: rect(0, 900px, 0, 0);
+            background-color: #222;
+            color: transparent;
+            animation: glitch 3s infinite alternate-reverse;
+            animation-delay: 1s;
+            z-index: 22;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            pointer-events: none;
+        }
+
+        @keyframes glitch {
+            0% {
+                clip: rect(6px, 9999px, 12px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: -2px;
+                top: 0px;
+            }
+            5% {
+                clip: rect(42px, 9999px, 87px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: 1px;
+                top: -2px;
+            }
+            10% {
+                clip: rect(18px, 9999px, 34px, 0);
+                -webkit-text-stroke: 2px red;
+                left: -1px;
+                top: 2px;
+            }
+            15% {
+                clip: rect(67px, 9999px, 112px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: 2px;
+                top: -1px;
+            }
+            20% {
+                clip: rect(30px, 9999px, 58px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: -3px;
+                top: 1px;
+            }
+            25% {
+                clip: rect(80px, 9999px, 95px, 0);
+                -webkit-text-stroke: 2px red;
+                left: 0px;
+                top: -2px;
+            }
+            30% {
+                clip: rect(10px, 9999px, 45px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: 1px;
+                top: 2px;
+            }
+            35% {
+                clip: rect(55px, 9999px, 78px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: -2px;
+                top: -1px;
+            }
+            40% {
+                clip: rect(22px, 9999px, 66px, 0);
+                -webkit-text-stroke: 2px red;
+                left: 2px;
+                top: 0px;
+            }
+            45% {
+                clip: rect(90px, 9999px, 120px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: -1px;
+                top: 2px;
+            }
+            50% {
+                clip: rect(8px, 9999px, 28px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: 0px;
+                top: -2px;
+            }
+            55% {
+                clip: rect(48px, 9999px, 72px, 0);
+                -webkit-text-stroke: 2px red;
+                left: 2px;
+                top: 1px;
+            }
+            60% {
+                clip: rect(15px, 9999px, 52px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: -2px;
+                top: -1px;
+            }
+            65% {
+                clip: rect(70px, 9999px, 105px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: 1px;
+                top: 2px;
+            }
+            70% {
+                clip: rect(35px, 9999px, 60px, 0);
+                -webkit-text-stroke: 2px red;
+                left: -3px;
+                top: 0px;
+            }
+            75% {
+                clip: rect(5px, 9999px, 38px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: 0px;
+                top: -2px;
+            }
+            80% {
+                clip: rect(62px, 9999px, 88px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: 2px;
+                top: 1px;
+            }
+            85% {
+                clip: rect(25px, 9999px, 50px, 0);
+                -webkit-text-stroke: 2px red;
+                left: -1px;
+                top: -1px;
+            }
+            90% {
+                clip: rect(75px, 9999px, 110px, 0);
+                -webkit-text-stroke: 2px lime;
+                left: 1px;
+                top: 2px;
+            }
+            95% {
+                clip: rect(12px, 9999px, 42px, 0);
+                -webkit-text-stroke: 2px blue;
+                left: -2px;
+                top: 0px;
+            }
+            100% {
+                clip: rect(50px, 9999px, 92px, 0);
+                -webkit-text-stroke: 2px red;
+                left: 0px;
+                top: -2px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            span {
+                font-size: clamp(28px, 8vw, 48px);
+            }
+            span::after {
+                font-size: inherit;
+            }
+        }
+
+        @media (max-width: 400px) {
+            span {
+                font-size: clamp(20px, 6vw, 32px);
+            }
+            @keyframes glitch {
+                0%,
+                100% {
+                    clip: rect(3px, 9999px, 25px, 0);
+                    -webkit-text-stroke: 1px lime;
+                    left: -1px;
+                    top: 0px;
+                }
+                50% {
+                    clip: rect(15px, 9999px, 35px, 0);
+                    -webkit-text-stroke: 1px red;
+                    left: 1px;
+                    top: -1px;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <span>METAIMPERIYA</span>
+
+</body>
+</html>
